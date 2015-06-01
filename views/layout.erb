@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./read.css">
+<title>Basic Rack App</title>
+</head>
+
+<body>
+  <%= yield %>
+  <hr>
+    <% @posts.each do |post| %>
+        <ul>
+            <li><a href="post/<%=post.id%>"><%= post.title %></a></li>
+        </ul>
+    <% end %>
+</body>
+
+</html>
